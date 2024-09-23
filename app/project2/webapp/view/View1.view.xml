@@ -1,0 +1,228 @@
+<mvc:View controllerName="project2.controller.View1"
+   displayBlock="true"
+    xmlns="sap.ui.table"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:m="sap.m"
+	height="100%">
+    	<m:Page
+        id="mPage1"
+		showHeader="false"
+		enableScrolling="false"
+		class="sapUiContentPadding">
+        		<m:content>
+                	<Table
+                    id="table1"
+                    ariaLabelledBy="title"
+				rows="{/modelData}"
+                    >
+                    <extension>
+					<m:OverflowToolbar id="OverflowToolbar1" style="Clear">
+						<m:Title id="title" text="Research Data"/>
+					</m:OverflowToolbar>
+				</extension>
+                <columns>
+                <Column
+						width="11rem">
+						<m:Label text="Line No." textAlign="Center" width="100%"/>
+						<template>
+							<m:Text text="{line_no.}"/>
+						</template>
+					</Column>
+                    <Column
+						width="11rem">
+						<m:Label text="S. No." textAlign="Center" width="100%"/>
+						<template>
+							<m:Text text="{sampleNumber}"/>
+						</template>
+					</Column>
+                    <Column
+						width="11rem">
+						<m:Label text="Job" textAlign="Center" width="100%"/>
+						<template>
+							<m:Text text="{job}"/>
+						</template>
+					</Column>
+                    <Column
+						width="11rem"
+						headerSpan="5,3">
+						<multiLabels>
+							<m:Label text="Cup" textAlign="Center" width="100%"/>
+							<m:Label text="OD" textAlign="Center" width="100%"/>
+							<m:Label text="Size" textAlign="Center" width="100%"/>
+						</multiLabels>
+						<template>
+							<m:Text text="{cup/0/od/0/size}" wrapping="false"/>
+						</template>
+					</Column>
+                    	<Column
+						width="11rem"
+						headerSpan="3,3">
+						<multiLabels>
+							<m:Label text="Cup" textAlign="Center" width="100%"/>
+							<m:Label text="OD" textAlign="Center" width="100%"/>
+							<m:Label text="DOR" textAlign="Center" width="100%"/>
+						</multiLabels>
+						<template>
+							<m:Text text="{cup/0/od/0/dor}"/>
+						</template>
+					</Column>
+                    	<Column
+						width="11rem"
+						headerSpan="3">
+						<multiLabels>
+							<m:Label text="Cup" textAlign="Center" width="100%"/>
+							<m:Label text="OD" textAlign="Center" width="100%"/>
+							<m:Label text="TAPER" textAlign="Center" width="100%"/>
+						</multiLabels>
+						<template>
+							<m:Text text="{cup/0/od/0/taper}"/>
+						</template>
+					</Column>
+                    	<Column
+						width="11rem"
+						headerSpan="3,2">
+						<multiLabels>
+							<m:Label text="Cup" textAlign="Center" width="100%"/>
+							<m:Label text="TRACK" textAlign="Center" width="100%"/>
+							<m:Label text="Size" textAlign="Center" width="100%"/>
+						</multiLabels>
+						<template>
+							<m:Text text="{cup/1/track/0/size}"/>
+						</template>
+					</Column>
+                    <Column
+						width="11rem"
+						headerSpan="2">
+						<multiLabels>
+							<m:Label text="Cup" textAlign="Center" width="100%"/>
+							<m:Label text="TRACK" textAlign="Center" width="100%"/>
+							<m:Label text="DOR" textAlign="Center" width="100%"/>
+						</multiLabels>
+						<template>
+							<m:Text text="{cup/1/track/0/dor}"/>
+						</template>
+					</Column>
+                    <Column
+						width="11rem"
+						headerSpan="3,3">
+						<multiLabels>
+							<m:Label text="Cone" textAlign="Center" width="100%"/>
+							<m:Label text="BORE" textAlign="Center" width="100%"/>
+							<m:Label text="Size" textAlign="Center" width="100%"/>
+						</multiLabels>
+						<template>
+							<m:Text text="{cone/0/bore/0/size}" wrapping="false"/>
+						</template>
+					</Column>
+                    <Column
+						width="11rem"
+						headerSpan="3,3">
+						<multiLabels>
+							<m:Label text="Cone" textAlign="Center" width="100%"/>
+							<m:Label text="BORE" textAlign="Center" width="100%"/>
+							<m:Label text="DOR" textAlign="Center" width="100%"/>
+						</multiLabels>
+						<template>
+							<m:Text text="{cone/0/bore/0/dor}"/>
+						</template>
+					</Column>
+                    <Column
+						width="11rem"
+						headerSpan="3">
+						<multiLabels>
+							<m:Label text="Cone" textAlign="Center" width="100%"/>
+							<m:Label text="BORE" textAlign="Center" width="100%"/>
+							<m:Label text="TAPER" textAlign="Center" width="100%"/>
+						</multiLabels>
+						<template>
+							<m:Text text="{cone/0/bore/0/taper}"/>
+						</template>
+					</Column>
+                    <Column
+						width="11rem"
+						headerSpan="7,2">
+						<multiLabels>
+							<m:Label text="Assembly" textAlign="Center" width="100%"/>
+							<m:Label text="HARDNESS" textAlign="Center" width="100%"/>
+							<m:Label text="CUP" textAlign="Center" width="100%"/>
+						</multiLabels>
+						<template>
+							<m:Text text="{assembely/0/hardness/0/cup}" wrapping="false"/>
+						</template>
+					</Column>
+                    <Column
+						width="11rem"
+						headerSpan="2">
+						<multiLabels>
+							<m:Label text="Assembly" textAlign="Center" width="100%"/>
+							<m:Label text="HARDNESS" textAlign="Center" width="100%"/>
+							<m:Label text="CONE" textAlign="Center" width="100%"/>
+						</multiLabels>
+						<template>
+							<m:Text text="{assembely/0/hardness/0/cone}" wrapping="false"/>
+						</template>
+					</Column>
+                    <Column
+						width="11rem"
+						headerSpan="5,0">
+						<multiLabels>
+							<m:Label text="Assembly" textAlign="Center" width="100%"/>
+							<m:Label text="STANDOUT" textAlign="Center" width="100%"/>
+						</multiLabels>
+						<template>
+							<m:Text text="{assembely/0/standout/}" wrapping="false"/>
+						</template>
+					</Column>
+                <Column
+						width="11rem"
+						headerSpan="3">
+						<multiLabels>
+							<m:Label text="Assembly" textAlign="Center" width="100%"/>
+							<m:Label text="TOTAL WIDTH / BAG STAND" textAlign="Center" width="100%"/>
+						</multiLabels>
+						<template>
+							<m:Text text="{assembely/0/totalwidth/badstand/}" wrapping="false"/>
+						</template>
+					</Column>
+                    <Column
+						width="11rem"
+						headerSpan="3">
+						<multiLabels>
+							<m:Label text="Assembly" textAlign="Center" width="100%"/>
+							<m:Label text="FREE RUNNING" textAlign="Center" width="100%"/>
+                            <m:Label text="NO TIGHT" textAlign="Center" width="100%"/>
+						</multiLabels>
+						<template>
+							<m:Text text="{assembely/0/freerunning/0/notight}" wrapping="false"/>
+						</template>
+					</Column>
+                    <Column
+						width="11rem"
+						headerSpan="3">
+						<multiLabels>
+							<m:Label text="Assembly" textAlign="Center" width="100%"/>
+							<m:Label text="VISUAL" textAlign="Center" width="100%"/>
+                            <m:Label text="AS PER STANDRAD" textAlign="Center" width="100%"/>
+						</multiLabels>
+						<template>
+							<m:Text text="{assembely/0/visual/0/asperstandard}" wrapping="false"/>
+						</template>
+					</Column>
+                    <Column
+						width="11rem"
+						headerSpan="3">
+						<multiLabels>
+							<m:Label text="Assembly" textAlign="Center" width="100%"/>
+							<m:Label text="FOOD CHECKING" textAlign="Center" width="100%"/>
+                            <m:Label text="AS PER STANDRAD" textAlign="Center" width="100%"/>
+						</multiLabels>
+						<template>
+							<m:Text text="{assembely/0/foodchecking/0/asperstandard}" wrapping="false"/>
+						</template>
+					</Column>
+                </columns>
+                    
+                    </Table>
+                </m:content>
+        </m:Page>
+</mvc:View>

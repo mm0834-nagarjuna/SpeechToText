@@ -1,0 +1,60 @@
+{
+    "lines": [
+        {
+            "line_no.": null,
+            "s.no.": 1,
+            "job": null,
+            "cup": [
+                {
+                    "od": [
+                        {
+                            "size": 200,
+                            "dor": 200,
+                            "taper": 200
+                        }
+                    ]
+                },
+                {
+                    "track": [
+                        {
+                            "sie": 40,
+                            "dor": 40
+                        }
+                    ]
+                }
+            ],
+            "cone": [
+                {
+                    "bore": [
+                        {
+                            "size": 20,
+                            "dor": 40,
+                            "taper": 30
+                        }
+                    ]
+                }
+            ],
+            "assembely": [
+                {
+                    "hardness": [
+                        {
+                            "cup": 30,
+                            "cone": 40
+                        }
+                    ],
+                    "standout": {},
+                    "totalwidth/badstand": {},
+                    "freerunning": {
+                        "notight": null
+                    },
+                    "visual": {
+                        "asperstandard": {}
+                    },
+                    "foodchecking": {
+                        "asperstandard": {}
+                    }
+                }
+            ]
+        }
+    ]
+}
